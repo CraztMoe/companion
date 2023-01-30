@@ -33,6 +33,7 @@ jobs:
           mv linux-unpacked companion-x64
           tar -cvzf companion-x64.tar.gz companion-x64
         env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
 
       - name: Determine files to upload
@@ -89,6 +90,7 @@ jobs:
           # verify that every module is runnable
           node tools/verify-module-build.mjs "electron-output/mac/Companion.app/Contents/Resources/app.asar"
         env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
           CSC_LINK: ${{ secrets.OSX_CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.OSX_CSC_KEY_PASSWORD }}
           APPLEID: ${{ secrets.APPLEID }}
@@ -149,6 +151,7 @@ jobs:
           # verify that every module is runnable
           node tools/verify-module-build.mjs "electron-output/mac-arm64/Companion.app/Contents/Resources/app.asar"
         env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
           CSC_LINK: ${{ secrets.OSX_CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.OSX_CSC_KEY_PASSWORD }}
           APPLEID: ${{ secrets.APPLEID }}
@@ -213,6 +216,7 @@ jobs:
           # verify that every module is runnable
           node tools/verify-module-build.mjs electron-output/win-unpacked/resources/app.asar
         env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
           CSC_LINK: ${{ secrets.CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
