@@ -12,6 +12,7 @@ jobs:
           node-version-file: '.node-version'
       - name: yarn update and lindist
         run: |
+          export CSC_IDENTITY_AUTO_DISCOVERY
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -74,6 +75,7 @@ jobs:
           node-version-file: '.node-version'
       - name: yarn update and macdist
         run: |
+          export CSC_IDENTITY_AUTO_DISCOVERY
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -135,6 +137,7 @@ jobs:
           node-version-file: '.node-version'
       - name: yarn update and macarmdist
         run: |
+          export CSC_IDENTITY_AUTO_DISCOVERY
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -197,6 +200,7 @@ jobs:
       - name: yarn update and windist
         shell: bash
         run: |
+          export CSC_IDENTITY_AUTO_DISCOVERY
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
