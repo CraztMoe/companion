@@ -12,7 +12,6 @@ jobs:
           node-version-file: '.node-version'
       - name: yarn update and lindist
         run: |
-          export CSC_IDENTITY_AUTO_DISCOVERY = false
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -33,6 +32,8 @@ jobs:
           cd electron-output
           mv linux-unpacked companion-x64
           tar -cvzf companion-x64.tar.gz companion-x64
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
 
       - name: Determine files to upload
         id: filenames
@@ -72,7 +73,6 @@ jobs:
           node-version-file: '.node-version'
       - name: yarn update and macdist
         run: |
-          export CSC_IDENTITY_AUTO_DISCOVERY = false
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -88,6 +88,8 @@ jobs:
 
           # verify that every module is runnable
           node tools/verify-module-build.mjs "electron-output/mac/Companion.app/Contents/Resources/app.asar"
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
 
       - name: Determine files to upload
         id: filenames
@@ -127,7 +129,6 @@ jobs:
           node-version-file: '.node-version'
       - name: yarn update and macarmdist
         run: |
-          export CSC_IDENTITY_AUTO_DISCOVERY = false
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -143,6 +144,8 @@ jobs:
 
           # verify that every module is runnable
           node tools/verify-module-build.mjs "electron-output/mac-arm64/Companion.app/Contents/Resources/app.asar"
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
 
       - name: Determine files to upload
         id: filenames
@@ -183,7 +186,6 @@ jobs:
       - name: yarn update and windist
         shell: bash
         run: |
-          export CSC_IDENTITY_AUTO_DISCOVERY = false
           # try and avoid timeout errors
           yarn config set network-timeout 100000 -g
 
@@ -202,6 +204,8 @@ jobs:
 
           # verify that every module is runnable
           node tools/verify-module-build.mjs electron-output/win-unpacked/resources/app.asar
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
 
       - name: Determine files to upload
         id: filenames
