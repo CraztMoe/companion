@@ -1,0 +1,17 @@
+{
+  "name": "pixelhue-f-series",
+  "version": "0.1.0",
+  "description": "This module will allow you to control the following Pixelhue products: F8, F4, F4 Lite",
+  "manufacturer": "Pixelhue",
+  "product": [
+    "F4",
+    "F8",
+    "F4 Lite"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pixelhue",
+  "license": "MIT"
+}
