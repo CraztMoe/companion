@@ -351,7 +351,7 @@ class instance extends instance_skel {
 				bank: {
 					bgcolor: 0,
 					style: 'text',
-					text: 'Toggle FTB',
+					text: 'FTB',
 					size: '18',
 					color: 16777215,
 					bgcolor: this.rgb(255,0,0),
@@ -377,7 +377,7 @@ class instance extends instance_skel {
 				bank: {
 					bgcolor: 0,
 					style: 'text',
-					text: 'Toggle Freeze',
+					text: 'FRZ',
 					size: '18',
 					color: 16777215,
 					bgcolor: this.rgb(255,0,0),
@@ -399,7 +399,7 @@ class instance extends instance_skel {
 		)
 
 		presets.push({
-			category: 'Presets to PVM',
+			category: 'Presets to PVW',
 			bank: {
 				style: 'text',
 				text: 'Preset',
@@ -421,7 +421,7 @@ class instance extends instance_skel {
 		for (index = 1; index <= 128; index ++)
 		{
 			presets.push({
-				category: 'Presets to PVM',
+				category: 'Presets to PVW',
 				bank: {
 					style: 'text',
 					text: 'Preset '+ index,
