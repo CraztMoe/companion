@@ -48,7 +48,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
-          name: crazt-lindist
+          name: companion-lindist
           path: ${{ steps.filenames.outputs.sourcename }}
 
   osx:
@@ -92,7 +92,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
-          name: crazt-macdist
+          name: companion-macdist
           path: ${{ steps.filenames.outputs.sourcename }}
 
   osx-arm64:
@@ -136,7 +136,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
-          name: crazt-macarmdist
+          name: companion-macarmdist
           path: ${{ steps.filenames.outputs.sourcename }}
 
   win64:
@@ -184,5 +184,5 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
-          name: crazt-windist
+          name: companion-windist
           path: ${{ steps.filenames.outputs.sourcename }}
