@@ -52,7 +52,7 @@ jobs:
           path: ${{ steps.filenames.outputs.sourcename }}
 
   osx:
-    runs-on: macos-latest
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js
