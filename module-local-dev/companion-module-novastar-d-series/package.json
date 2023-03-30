@@ -1,0 +1,15 @@
+{
+  "name": "novastar-d-series",
+  "version": "0.1.0",
+  "description": "This module will allow you to control the following novastar products: D12",
+  "manufacturer": "Novastar",
+  "product": [
+    "D12"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Novastar",
+  "license": "MIT"
+}
